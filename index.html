@@ -14,8 +14,8 @@
     }
 
     body {
-      background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 40%, #f8fafc 100%);
-      color: #1a1a1a;
+      background: linear-gradient(160deg, #0b1120 0%, #0f172a 40%, #020617 100%);
+      color: #e2e8f0;
       text-align: center;
       min-height: 100vh;
       display: flex;
@@ -31,67 +31,76 @@
     }
 
     h1 {
-      color: #0066ff;
-      font-size: 26px;
+      background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 28px;
       font-weight: 700;
-      margin-top: 28px;
-      letter-spacing: 0.5px;
+      margin-top: 30px;
+      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     .tagline {
       font-size: 15px;
-      margin: 10px 0 6px;
-      color: #333;
+      margin: 12px 0 8px;
+      color: #94a3b8;
       font-weight: 500;
     }
 
     .timer {
       display: inline-block;
-      background: #fff4e6;
-      color: #e65c00;
+      background: rgba(251, 146, 60, 0.12);
+      border: 1px solid rgba(251, 146, 60, 0.35);
+      color: #fb923c;
       font-size: 15px;
       font-weight: 600;
-      padding: 8px 18px;
+      padding: 9px 20px;
       border-radius: 50px;
-      margin: 12px 0 8px;
-      box-shadow: 0 2px 8px rgba(230, 92, 0, 0.15);
+      margin: 14px 0 10px;
+      box-shadow: 0 0 20px rgba(251, 146, 60, 0.15);
     }
 
     .timer span {
       font-weight: 700;
       font-size: 17px;
+      color: #fdba74;
     }
 
     .profile {
-      margin: 18px 0 12px;
+      margin: 20px 0 14px;
+      position: relative;
     }
 
     .profile img {
-      width: 150px;
-      height: 150px;
+      width: 155px;
+      height: 155px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #0066ff;
-      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.25);
-      transition: transform 0.3s ease;
+      border: 3px solid #38bdf8;
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.4),
+                  0 0 60px rgba(56, 189, 248, 0.15);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
     .profile img:hover {
-      transform: scale(1.04);
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(56, 189, 248, 0.55),
+                  0 0 80px rgba(56, 189, 248, 0.2);
     }
 
     h2 {
-      color: #0066ff;
+      color: #f1f5f9;
       font-size: 18px;
       font-weight: 600;
-      margin-top: 6px;
+      margin-top: 8px;
     }
 
     .sub-text {
       font-size: 14px;
-      color: #444;
-      margin: 6px 0 18px;
+      color: #94a3b8;
+      margin: 6px 0 22px;
     }
 
     .view-btn {
@@ -99,27 +108,43 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 14px 32px;
-      background: linear-gradient(135deg, #25D366, #128C7E);
+      padding: 15px 34px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
       color: #fff;
       border: none;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
       font-size: 16px;
-      letter-spacing: 0.4px;
-      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
       transition: all 0.3s ease;
-      margin-bottom: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .view-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .view-btn:hover::before {
+      left: 100%;
     }
 
     .view-btn:hover {
-      transform: translateY(-2px) scale(1.03);
-      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.55);
     }
 
     .view-btn:active {
-      transform: scale(0.98);
+      transform: scale(0.97);
     }
 
     .view-btn svg {
@@ -131,36 +156,37 @@
 
     .footer {
       font-size: 14px;
-      margin-top: 14px;
-      color: #555;
+      margin-top: 18px;
+      color: #64748b;
       font-weight: 500;
     }
 
     .credit {
       text-align: center;
       font-size: 13px;
-      margin: 18px 0 8px;
-      color: #666;
+      margin: 20px 0 10px;
+      color: #64748b;
     }
 
     .credit a {
-      color: #0066ff;
+      color: #38bdf8;
       text-decoration: none;
       font-weight: 600;
     }
 
     .disclaimer {
-      background: #f1f5f9;
-      color: #555;
+      background: rgba(15, 23, 42, 0.8);
+      color: #94a3b8;
       font-size: 12px;
       text-align: center;
-      padding: 12px 14px 10px;
-      border-top: 1px solid #e2e8f0;
-      line-height: 1.5;
-      border-radius: 12px 12px 0 0;
+      padding: 14px 16px 12px;
+      border-top: 1px solid #1e293b;
+      line-height: 1.55;
+      border-radius: 14px 14px 0 0;
       max-width: 480px;
       margin: 0 auto;
       width: 100%;
+      backdrop-filter: blur(8px);
     }
 
     .footer-links {
@@ -168,39 +194,39 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 6px;
-      padding: 8px 0 16px;
-      background: #f1f5f9;
-      border-radius: 0 0 12px 12px;
+      gap: 8px;
+      padding: 10px 0 18px;
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: 0 0 14px 14px;
       max-width: 480px;
-      margin: 0 auto 10px;
+      margin: 0 auto 12px;
       width: 100%;
+      border-top: none;
     }
 
     .footer-links a {
-      color: #0066ff;
+      color: #38bdf8;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s;
     }
 
     .footer-links a:hover {
-      color: #004ecc;
+      color: #7dd3fc;
     }
 
     .footer-links span {
-      color: #94a3b8;
+      color: #475569;
     }
 
-    /* Soft pulse animation for the button */
-    @keyframes softPulse {
-      0% { box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35); }
-      50% { box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5); }
-      100% { box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35); }
+    /* Glow pulse for button */
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4); }
+      50% { box-shadow: 0 8px 32px rgba(34, 197, 94, 0.65); }
     }
 
     .view-btn {
-      animation: softPulse 2.5s infinite;
+      animation: glowPulse 2.8s infinite ease-in-out;
     }
   </style>
 </head>
